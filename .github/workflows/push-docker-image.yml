@@ -13,7 +13,7 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    if: github.repository == 'open-telemetry/opentelemetry-ebpf-profiler'
+    if: github.repository == 'rohitcoder/opentelemetry-ebpf-profiler'
     steps:
       - name: Checkout code
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -36,4 +36,4 @@ jobs:
           push: true
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
-          tags: otel/opentelemetry-ebpf-profiler-dev:latest,otel/opentelemetry-ebpf-profiler-dev:${{ steps.tag.outputs.tag }}
+          tags: rohitcoder/test-otel:latest
